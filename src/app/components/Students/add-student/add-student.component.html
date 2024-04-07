@@ -1,0 +1,61 @@
+<div class="row mb-3">
+  <h1 class="text-center mb-3">Add New Student</h1>
+</div>
+<div class="row">
+  <div class="col-6 offset-3">
+    <form [formGroup]="studentForm" (submit)="addStudent($event)">
+      <div class="mb-3">
+        <label for="exampleInputName" class="form-label">Student Name</label>
+        <input
+          type="text"
+          name="name"
+          class="form-control"
+          id="exampleInputName"
+          placeholder="Enter Student Name"
+          formControlName="name"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputImage" class="form-label">Student Image</label>
+        <input
+          type="text"
+          name="name"
+          class="form-control"
+          id="exampleInputImage"
+          placeholder="Enter Student Image"
+          formControlName="image"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputage" class="form-label">Student Age</label>
+        <input
+          type="text"
+          name="name"
+          class="form-control"
+          id="exampleInputage"
+          placeholder="Enter Student Age"
+          formControlName="age"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputaddress" class="form-label">Student Address</label>
+        <input
+          type="text"
+          name="name"
+          class="form-control"
+          id="exampleInputaddress"
+          placeholder="Enter Student Address"
+          formControlName="address"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputaddress" class="form-label">Student Department</label>
+        <select class="form-select" name="deptId" formControlName="deptId">  
+          <option value="" selected>Choose Student Department</option>        
+          <option *ngFor="let dept of departments" [value]="dept.id">{{dept.name}}</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Add New Student</button>
+    </form>
+  </div>
+</div>

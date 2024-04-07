@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-12">
+    <h1 class="mb-3 text-center">Student Details</h1>
+    <div class="row bg-light p-5 rounded">
+      <div class="col-12 text-center">
+        <img [src]="studentDetails.image"  [alt]="studentDetails.image" class="img-thumbnail mb-3" />
+        <h2 class="mb-2">{{studentDetails.name}}</h2>
+        <p class="lead mb-3">{{studentDetails.department}}</p>
+        <ul class="list-unstyled mb-3">
+          <li class="mb-3"><strong>Age:</strong> {{studentDetails.age}}</li>
+          <li class="mb-3"><strong>Address:</strong> {{studentDetails.address}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
